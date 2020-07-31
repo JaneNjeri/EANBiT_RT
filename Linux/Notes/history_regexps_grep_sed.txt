@@ -1,0 +1,151 @@
+ 2007  grep --color ACAAGTTTG nrf1_seq.fa
+ 2008  grep --color 'ACAAGTTTG' nrf1_seq.fa
+ 2009  grep --color 'ACAAGTTTG[TA]' nrf1_seq.fa
+ 2010  grep --color 'ACAAGTTTG[TAC]' nrf1_seq.fa
+ 2011  grep --color 'ACAAGTTTG[^TAC]' nrf1_seq.fa
+ 2012  clear
+ 2013  grep --color 'ACAAGTTTG[^TA]' nrf1_seq.fa
+ 2014  grep --color 'ACAA.TTTGTT' nrf1_seq.fa
+ 2015  grep --color 'ACAA.TTTG' nrf1_seq.fa
+ 2016  grep --color 'ACAA.TTTGA' nrf1_seq.fa
+ 2017  grep --color 'ACAA*TTTGA' nrf1_seq.fa
+ 2018  grep --color 'ACATTT*GA' nrf1_seq.fa
+ 2019  grep --color 'ACA' nrf1_seq.fa
+ 2020  grep --color 'ACA' nrf1_seq.fa | wc -l
+ 2021  grep --color 'ACATTT*GA' nrf1_seq.fa
+ 2022  grep --color -o 'ACATTT*GA' nrf1_seq.fa
+ 2023  grep --color -o 'ACATTT*GA' nrf1_seq.fa| wc -l
+ 2024  grep --color 'ACATTT*GA' nrf1_seq.fa| wc -l
+ 2025  grep --color 'ACA' nrf1_seq.fa| wc -l
+ 2026  grep --color -o 'ACA' nrf1_seq.fa| wc -l
+ 2027  man grep
+ 2028  grep --color -o -n 'ACA' nrf1_seq.fa| less
+ 2029  less -S nrf1_seq.fa 
+ 2030  grep --color 'TCTCCTGCCCTTGATATATTGCTTACCCCTCTCTTAAA' nrf1_seq.fa 
+ 2031  grep --color 'TCTCCTGCCCTTGATATATTGCTT[^A]CCCCTCTCTTAAA' nrf1_seq.fa 
+ 2032  clear
+ 2033  grep '^>' nrf1_seq.fa 
+ 2034  grep 'predicted' nrf1_seq.fa 
+ 2035  grep -i 'predicted' nrf1_seq.fa 
+ 2036  grep -i '[[:upper:]]' nrf1_seq.fa 
+ 2037  grep -i '[[:lower:]]' nrf1_seq.fa 
+ 2038  grep '[[:lower:]]' nrf1_seq.fa 
+ 2039  grep --color '[[:lower:]]' nrf1_seq.fa 
+ 2040* grep --color '[[:lower:]]' nrf1_seq.fa 
+ 2041  vim dummy_months
+ 2042  grep --color '[A-Z]' dummy_months 
+ 2043  grep --color '[ABCDZ]' dummy_months 
+ 2044  grep --color '[:upper:]' dummy_months 
+ 2045  grep --color '[[:upper:]]' dummy_months 
+ 2046  grep --color '[[:lower:]]' dummy_months 
+ 2047  grep --color '[a-z]' dummy_months 
+ 2048  grep --color '[[:upper:]][[:lower:]]' dummy_months 
+ 2049  grep --color '^[[:upper:]][[:lower:]]' dummy_months 
+ 2050  vim dummy_months 
+ 2051  grep --color '[[:alpha:]]' dummy_months 
+ 2052  grep --color -o '[[:alpha:]]' dummy_months 
+ 2053  grep --color -o '[[:alpha:]]*' dummy_months 
+ 2054  grep --color -o '[[:digit:]]*' dummy_months 
+ 2055  grep --color -o 'T{5,8}' nrf1_seq.fa 
+ 2056  egrep --color -o 'T{5,8}' nrf1_seq.fa 
+ 2057  man grep
+ 2058  grep -E --color -o 'T{5,8}' nrf1_seq.fa 
+ 2059  grep --color -o 'T\{5,8\}' nrf1_seq.fa 
+ 2060  grep --color 'T\{5,8\}' nrf1_seq.fa 
+ 2061  grep --color 'T\{15,18\}' nrf1_seq.fa 
+ 2062  grep --color 'T\{15,18\}' nrf1_seq.fa | less
+ 2063  grep --color 'T\{15,18\}' nrf1_seq.fa | more
+ 2064  grep --color 'T\{15,18\}' nrf1_seq.fa 
+ 2065  grep --color 'T\{15,18\}' nrf1_seq.fa > temp
+ 2066  cat temp 
+ 2067  grep --color 'T\{15,18\}' nrf1_seq.fa
+ 2068  grep --color 'T\{15,18\}|GGGG' nrf1_seq.fa
+ 2069  grep --color 'T\{15,18\}\|GGGG' nrf1_seq.fa
+ 2070  grep --color -o 'T\{15,18\}\|GGGG' nrf1_seq.faq
+ 2071  grep --o 'T\{15,18\}\|GGGG' nrf1_seq.faq
+ 2072  ls
+ 2073  grep --o 'T\{15,18\}\|GGGG' nrf1_seq.faq
+ 2074  grep --o 'T\{15,18\}\|GGGG' nrf1_seq.fa 
+ 2075  grep --o 'T\{15,18\}\|GGGG' nrf1_seq.fa  | sort | uniq -c
+ 2076  grep -E --o 'T{16}' nrf1_seq.fa
+ 2077  grep -E -o 'T{16}' nrf1_seq.fa
+ 2078  grep -E --color 'T{16}' nrf1_seq.fa
+ 2079  grep -E --color '[^T]T{16}[^T]' nrf1_seq.fa
+ 2080  grep -E --color -o '[^T]T{16}[^T]' nrf1_seq.fa | wc -l
+ 2081  ls
+ 2082  less -S asfv_namibia.gbk 
+ 2083  less -S nrf1_seq.fa 
+ 2084  less -S <(grep '^>' nrf1_seq.fa) 
+ 2085  grep '^>' nrf1_seq.fa | less -S
+ 2086  grep '^>' nrf1_seq.fa | less -S
+ 2087  grep '^>[^_]*$' nrf1_seq.fa  | wc -l
+ 2088  grep '^>[^_]*' nrf1_seq.fa  | wc -l
+ 2089* grep --color '^>[]*$' nrf1_seq.fa
+ 2090  ls
+ 2091  less dummy_months 
+ 2092  grep --color 'A*' dummy_months 
+ 2093  grep --color 'A+' dummy_months 
+ 2094  grep -E --color 'A+' dummy_months 
+ 2095  vim dummy_months 
+ 2096  grep -E --color 'A+' dummy_months 
+ 2097  grep -E --color '[[:lower:]]+' dummy_months 
+ 2098  grep -E --color '[[:lower:]]+' nrf1_seq.fa | wc -l 
+ 2099  grep -E --color '[[:lower:]]*' nrf1_seq.fa | wc -l 
+ 2100  grep -E --color '[[:lower:]][[:lower:]]*' nrf1_seq.fa | wc -l 
+ 2101  grep -E --color '^>[[:upper:]]+[[:digits:]]+'
+ 2102  grep -E --color '^>[[:upper:]]+[[:digit:]]+'
+ 2103  grep -E --color '^>[[:upper:]]+[[:digit:]]+' nrf1_seq.fa 
+ 2104  grep -E --color '^>[[:upper:]]+[[:digit:]]+\.[[:digit:]]+' nrf1_seq.fa 
+ 2105  grep -o -E --color '^>[[:upper:]]+[[:digit:]]+\.[[:digit:]]+' nrf1_seq.fa 
+ 2106  grep '[:alpha:]' nrf1_seq.fa 
+ 2107  grep -E '[:alpha:]' nrf1_seq.fa 
+ 2108  grep -E '[[:alpha:]]' nrf1_seq.fa 
+ 2109  grep -o -E --color '^>[[:upper:]]+[[:digit:]]+\.[[:digit:]]+' nrf1_seq.fa 
+ 2110  grep -o -E --color '^>[[:upper:]]+[[:digit:]]+\.[[:digit:]]+' nrf1_seq.fa | tr -d '>'
+ 2111  grep -o -E --color '^>[[:upper:]][[:digit:]]+\.[[:digit:]]+' nrf1_seq.fa | tr -d '>'
+ 2112  grep -o -E --color '^>[[:upper:]]{2,} [[:digit:]]+\.[[:digit:]]+' nrf1_seq.fa | tr -d '>'
+ 2113  grep -o -E --color '^>[[:upper:]]{2,}[[:digit:]]+\.[[:digit:]]+' nrf1_seq.fa | tr -d '>'
+ 2114  grep -o -E --color '^>[[:upper:]]+[[:digit:]]{5}\.[[:digit:]]+' nrf1_seq.fa | tr -d '>'
+ 2115  echo $SHELL
+ 2116  /bin/bash --version
+ 2117  grep -o -E --color '^>[[:upper:]]+[[:digit:]]{5}\.[[:digit:]A]+' nrf1_seq.fa | tr -d '>'
+ 2118  less dummy_months 
+ 2119  sed 5 dummy_months 
+ 2120  clear
+ 2121  sed '' dummy_months 
+ 2122  sed '5p' dummy_months 
+ 2123  sed -n '' dummy_months 
+ 2124  sed -n '5p' dummy_months 
+ 2125  wc -l nrf1_seq.fa 
+ 2126  sed -n '5000p' nrf1_seq.fa 
+ 2127  sed -n '5000s/CACCC/XXXXX/' nrf1_seq.fa 
+ 2128  sed -n '5000s/CACCC/XXXXX/;p' nrf1_seq.fa 
+ 2129  sed 's/pril/XXXXXXX/' dummy_months 
+ 2130  sed '3s/pril/XXXXXXX/' dummy_months 
+ 2131  vim dummy_months 
+ 2132  sed '3s/pril/XXXXXXX/' dummy_months 
+ 2133  sed '3s/pril/XXXXXXX/g' dummy_months 
+ 2134  sed 's/pril/XXXXXXX/g' dummy_months 
+ 2135  sed '3s/pril/XXXXXXX/' dummy_months 
+ 2136  sed '1,3 s/pril/XXXXXXX/' dummy_months 
+ 2137  sed '/8/ s/pril/XXXXXXX/' dummy_months 
+ 2138  sed '3a\' dummy_months 
+ 2139  sed '3a\
+mynew line is this one\
+' dummy_months
+ 2140  sed '3a\
+this is my new line' dummy_months
+ 2141  sed 's/pril/XXX/' dummy_months 
+ 2142  sed 's/pril/XXX' dummy_months 
+ 2143  sed 's#pril#XXX#' dummy_months 
+ 2144  sed 's_pril_XXX_' dummy_months 
+ 2145  sed 's_pril_XXX' dummy_months 
+ 2146  grep -o -E --color '^>[[:upper:]]+[[:digit:]]{5}\.[[:digit:]]+' nrf1_seq.fa | tr -d '>'
+ 2147  grep -o -E --color '^>[[:upper:]]+[[:digit:]]+\.[[:digit:]]+' nrf1_seq.fa | tr -d '>'
+ 2148  sed -n '/^>[[:upper:]]+[[:digit:]]+\.[[:digit:]]+/p'
+ 2149  sed -n '/^>[[:upper:]]+[[:digit:]]+\.[[:digit:]]+/p' nrf1_seq.fa 
+ 2150  sed -n '/^>[[:upper:]]\+[[:digit:]]\+\.[[:digit:]]\+/p' nrf1_seq.fa 
+ 2151  grep '^>' nrf1_seq.fa > identifiers.txt
+ 2152  sed '/^>[[:upper:]]\+[[:digit:]]\+\.[[:digit:]]\+/p' identifiers.txt 
+ 2153  sed 's/^>[[:upper:]]\+[[:digit:]]\+\.[[:digit:]]\+//' identifiers.txt | less -S
+ 2154  sed 's#^\(>[[:upper:]]\+[[:digit:]]\+\)\.\([[:digit:]]\+\)#\1 version \2#' identifiers.txt | less -S
